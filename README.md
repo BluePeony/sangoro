@@ -3,13 +3,13 @@ A ruby script to change the time stamp of JPEG creation
 
 # Installation
 Following needs to be installed prior to running the script:
-- ruby
+- ruby (v >= 2.3.3)
 
 Gems:
-- gtk3
-- fileutils
-- fast_image
-- mini_exiftool
+- gtk3 (```gem install gtk3```)
+- fileutils (```gem install fileutils```)
+- fast_image (```gem install fast_image```)
+- mini_exiftool (```gem install mini_exiftool```)
 
 After the you installed ruby and the gems, clone this repo to your local computer via 
 ```git clone https://github.com/BluePeony/sangoro.git```
