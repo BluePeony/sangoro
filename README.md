@@ -15,7 +15,7 @@ After the you installed ruby and the gems, clone this repo to your local compute
 ```git clone https://github.com/BluePeony/sangoro.git```
 Now you can just run ```ruby /path-to-your-local-sangoro/sangoro.rb``` in your command line.
 
-#Usage
+# Usage
 1. Select a JPEG file by clicking on "Select image"
 2. You will see the file name and the creation date & time on the right side, if available.
 3. Now you can specify by how many hours, minutes and/or seconds you want the time stamp to move. You also need to choose whether to move the timestamp forward or back.
