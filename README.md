@@ -11,7 +11,7 @@ Gems:
 - fast_image
 - mini_exiftool
 
-After the you installed ruby and the gems, clone this repo to your local computer via git clone https://github.com/BluePeony/sangoro.git
+After the you installed ruby and the gems, clone this repo to your local computer via ```git clone https://github.com/BluePeony/sangoro.git```
 Now you can just run ruby /path-to-your-local-sangoro/sangoro.rb in your command line.
 
 #Usage
