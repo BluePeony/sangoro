@@ -198,7 +198,7 @@ apply_btn.signal_connect("clicked") do |w|
 		end
 		
 		all_images.each do |im|
-			miniexif_img = MiniExiftool.new(im)
+			miniexif_img = MiniExiftool.new("#{dir_path}/#{im}")
 			if miniexif_img.datetimeoriginal
 				miniexif_img.datetimeoriginal += time_diff
 				count += 1
