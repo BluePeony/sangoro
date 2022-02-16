@@ -1,6 +1,6 @@
 # Sangoro
-A ruby script to change the creation time stamp of JPEG or PNG images.
-Video demo: https://www.youtube.com/watch?v=yAoQi_NcPWY
+A ruby script to change the creation time stamp of JPEG or PNG images.<br>
+Demo: https://www.youtube.com/watch?v=yAoQi_NcPWY
 
 # Installation
 Following needs to be installed prior to running the script:
