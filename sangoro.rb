@@ -98,6 +98,7 @@ select_img_btn.signal_connect("clicked") do |w|
 	dialog = Gtk::FileChooserDialog.new(:title => "select image", :parent => window, :action => Gtk::FileChooserAction::OPEN, 
 	:buttons => [[Gtk::Stock::OPEN, Gtk::ResponseType::ACCEPT], [Gtk::Stock::CANCEL, Gtk::ResponseType::CANCEL]])
 
+	# Process the selected image
 	if dialog.run == Gtk::ResponseType::ACCEPT
 		selected_file = dialog.filename
 		dir_path = dialog.current_folder
@@ -118,7 +119,7 @@ end
 #---------------Define the new time---------------
 move_time_label = Gtk::Label.new("move the creation time ")
 
-
+# Process the input for the new hour, minutes and seconds
 new_hour_ent.signal_connect("key_release_event") {
 	if (new_hour_ent.text.to_i.to_s == new_hour_ent.text) || single_digits.include?(new_hour_ent.text)
 		new_hour_val = new_hour_ent.text.to_i
@@ -178,7 +179,8 @@ apply_btn.signal_connect("clicked") do |w|
 		time_diff *= -1
 	end
 
-	if !apply_all_btn.active? #apply for the selected image only
+	# Apply the new time for the selected image only
+	if !apply_all_btn.active? 
 		if photo.datetimeoriginal 
 			photo.datetimeoriginal += time_diff
 			img_time_text.set_markup("<span color='green'>   #{photo.datetimeoriginal.to_s} </span>")
@@ -188,8 +190,9 @@ apply_btn.signal_connect("clicked") do |w|
 			photo.createdate += time_diff
 		end	
 		photo.save	
-		
-	else # apply for all images in the folder
+	
+	# Apply the new time for all images in the folder
+	else 
 		all_entries = Dir.entries(dir_path)
 		all_entries.each do |el|
 			if el.include?(".jpg") || el.include?(".jpeg") || el.include?(".JPG") || el.include?(".JPEG")
@@ -215,6 +218,7 @@ apply_btn.signal_connect("clicked") do |w|
 	success_label.set_markup("<span font_desc='16' color='green'>Creation time successfully changed! #{count} image(s) affected.</span>")
 end
 
+# Cancel button
 cancel_btn = Gtk::Button.new(:label => "Cancel", :use_underline => nil, :stock_id => nil)
 cancel_btn.child.override_font(prozalibre)
 cancel_btn.signal_connect("clicked") do |w| 
