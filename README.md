@@ -12,7 +12,8 @@ Gems:
 - fast_image (```gem install fast_image```)
 - mini_exiftool (```gem install mini_exiftool```)
 
-On Mac you might need the exiftool installed. I recommend installing it using the Brew package manager: ```brew install exiftool```
+On Mac you might need the exiftool installed. I recommend installing it using the Brew package manager:
+```brew install exiftool```
 
 After the you installed ruby and the gems, clone this repo to your local computer via 
 ```git clone https://github.com/BluePeony/sangoro.git```
