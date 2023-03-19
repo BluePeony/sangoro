@@ -1,5 +1,5 @@
-require_relative 'sangoro_new'
+require_relative 'user_interface'
 
-window = Interface.new
+window = UserInterface.new
 
 window.run

@@ -3,7 +3,7 @@ require 'fileutils'
 require 'fastimage'
 require 'mini_exiftool'
 
-class Interface
+class UserInterface
 
 	def initialize
 		@hour_set = false
@@ -64,7 +64,7 @@ class Interface
 		@select_img_btn = Gtk::Button.new(:label => "Select image", :use_underline => nil, :stock_id => nil)
 		@apply_btn = Gtk::Button.new(:label => "Apply", :use_underline => nil, :stock_id => nil)
 		@quit_btn = Gtk::Button.new(:label => "Quit", :use_underline => nil, :stock_id => nil)
-
+		toggle_btn_sensitivity(false)
 	end
 
 	def toggle_btn_sensitivity(sensitive_mode)
@@ -174,10 +174,7 @@ class Interface
 		if @photo.createdate
 			@photo.createdate += time_difference
 		end	
-		if @photo.save	
-			puts "We did it!"
-		end
-		
+		@photo.save			
 		return count	
 	end
 
@@ -285,7 +282,6 @@ class Interface
 		@new_sec_ent.signal_connect("key_release_event") {
 			@new_sec_val, @sec_set = process_time_unit(@new_sec_ent)
 		}
-		
 
 		# execute the action when the the ACCEPT button is clicked
 		@apply_btn.signal_connect("clicked") { 
