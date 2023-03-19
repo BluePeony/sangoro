@@ -9,7 +9,7 @@ Following needs to be installed prior to running the script:
 Gems:
 - gtk3 (```gem install gtk3```)
 - fileutils (```gem install fileutils```)
-- fast_image (```gem install fast_image```)
+- fastimage (```gem install fastimage```)
 - mini_exiftool (```gem install mini_exiftool```)
 
 On Mac you might need the exiftool installed. I recommend installing it using the Brew package manager:
