@@ -67,6 +67,16 @@ class Interface
 
 	end
 
+	def toggle_btn_sensitivity(sensitive_mode)
+		@apply_all_btn.sensitive = sensitive_mode
+		@forward_btn.sensitive = sensitive_mode
+		@backward_btn.sensitive = sensitive_mode
+		@apply_btn.sensitive = sensitive_mode
+		@new_hour_ent.sensitive = sensitive_mode
+		@new_min_ent.sensitive = sensitive_mode
+		@new_sec_ent.sensitive = sensitive_mode
+	end
+
 	# define the actions for the SELECT button
 	def run_select_action(img_name_text, img_time_text)
 		@hour_set = false
@@ -88,8 +98,11 @@ class Interface
 			img_name_text.set_text("                         #{File.basename(selected_file)}")
 			if @photo.datetimeoriginal
 				img_time_text.set_text("   #{@photo.datetimeoriginal.to_s}")
+				toggle_btn_sensitivity(true)
 			else
 				img_time_text.set_text("   No creation time available")
+				toggle_btn_sensitivity(false)
+				@success_label.set_markup("<span font_desc='13' color='orange'>The original creation timestamp could not be detected. Therefore, it is not possible to change the timestamp.</span>")
 			end
 
 			dialog.destroy
@@ -175,7 +188,7 @@ class Interface
 		all_entries = Dir.entries(dir_path)
 		all_entries.each do |el|
 			el.downcase!
-			if el.include?(".jpg") || el.include?(".jpeg") || el.include?(".png")
+			if el.include?(".jpg") || el.include?(".jpeg")
 				all_images << el
 			end
 		end
