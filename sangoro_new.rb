@@ -161,7 +161,9 @@ class Interface
 		if @photo.createdate
 			@photo.createdate += time_difference
 		end	
-		@photo.save	
+		if @photo.save	
+			puts "We did it!"
+		end
 		
 		return count	
 	end
