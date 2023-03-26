@@ -1,5 +1,5 @@
 # Sangoro
-A ruby script to change the creation time stamp of JPEG or PNG images.<br>
+A Ruby program to change the exif creation time stamp of JPEGs or PNGs.<br>
 Demo: https://www.youtube.com/watch?v=yAoQi_NcPWY
 
 # Installation
@@ -15,9 +15,9 @@ Gems:
 On Mac you might need the exiftool installed. I recommend installing it using the Brew package manager:
 ```brew install exiftool```
 
-After the you installed ruby and the gems, clone this repo to your local computer via 
-```git clone https://github.com/BluePeony/sangoro.git```
-Now you can just run ```ruby /path-to-your-local-sangoro/sangoro.rb``` in your command line.
+After the you installed ruby and the gems, install the gem:
+```git install sangoro```
+Now you can just run ```sangoro``` in your command line.
 
 # Usage
 1. Select a JPEG/PNG file by clicking on "Select image"
