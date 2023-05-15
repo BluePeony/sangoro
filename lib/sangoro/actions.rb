@@ -121,8 +121,8 @@ module Sangoro
       all_images = []
       all_entries = Dir.entries(dir_path)
       all_entries.each do |el|
-        el.downcase!
-        if el.include?(".jpg") || el.include?(".jpeg")
+        el_down = el.downcase
+        if el_down.include?(".jpg") || el_down.include?(".jpeg")
           all_images << el
         end
       end
