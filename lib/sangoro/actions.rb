@@ -137,7 +137,7 @@ module Sangoro
           miniexif_img.createdate += time_difference 
         end 
         miniexif_img.save
-        if im == File.basename(selected_file)
+        if im.downcase == File.basename(selected_file).downcase
           img_time_text.set_markup("<span color='green'>   #{miniexif_img.datetimeoriginal.to_s} </span>")
         end
       end
