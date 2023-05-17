@@ -1,22 +1,24 @@
 # Sangoro
 A Ruby program to change the exif creation time stamp of JPEGs or PNGs.<br>
-Demo: https://www.youtube.com/watch?v=yAoQi_NcPWY
+
 
 # Installation
-Following needs to be installed prior to running the script:
-- ruby (v >= 2.3.3)
-
-Gems:
-- gtk3 (```gem install gtk3```)
-- fileutils (```gem install fileutils```)
-- fastimage (```gem install fastimage```)
-- mini_exiftool (```gem install mini_exiftool```)
+To use the Sangoro tool you require:
+<ul>
+  <li> <a href="https://www.ruby-lang.org/en/downloads/"><code>ruby</code></a> (v>=2.3.3)
+</ul>
+as well as the following Ruby gems:  
+<ul>
+  <li><code>fastimage</code>
+  <li><code>fileutils</code>
+  <li><code>gtk3</code>
+  <li><code>mini_exiftool</code></li>
+</ul>  
 
 On Mac you might need the exiftool installed. I recommend installing it using the Brew package manager:
 ```brew install exiftool```
 
-After the you installed ruby and the gems, install the gem:
-```git install sangoro```
+Get the Sangoro tool by typing ```gem install sangoro``` in your command line. This will install the sangoro gem as well as the gems mentined above.
 Now you can just run ```sangoro``` in your command line.
 
 # Usage
@@ -25,4 +27,7 @@ Now you can just run ```sangoro``` in your command line.
 3. Now you can specify by how many hours, minutes and/or seconds you want the time stamp to move. You also need to choose whether to move the timestamp forward or back.
 4. If you want to apply this change to all images in the folder, check the box below.
 5. Click "Apply". 
-6. You are done. The creation timestamp of the selected image(s) was adjusted as specified.
+6. You are done. The exif creation timestamp of the selected image(s) was adjusted as specified.
+
+# Remarks  
+If you have any remarks, bugs, questions etc. please tell me, I'd be happy to help. 

@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name         = "sangoro"
-  s.version      = "1.0.1"
+  s.version      = "1.0.2"
   s.author       = "BluePeony"
   s.email        = "blue.peony2314@gmail.com"
   s.homepage     = "https://github.com/BluePeony/sangoro"
@@ -12,7 +12,7 @@ Gem::Specification.new do |s|
   s.test_files    = Dir["spec/**/*"]
   s.executables   = [ 'sangoro' ]
 
-  s.required_ruby_version = '>=1.9'
+  s.required_ruby_version = '>=2.3.3'
   s.add_runtime_dependency 'gtk3'
   s.add_runtime_dependency 'fileutils'
   s.add_runtime_dependency 'fastimage'
