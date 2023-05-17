@@ -6,6 +6,7 @@ A Ruby program to change the exif creation time stamp of JPEGs or PNGs.<br>
 To use the Sangoro tool you require:
 <ul>
   <li> <a href="https://www.ruby-lang.org/en/downloads/"><code>ruby</code></a> (v>=2.3.3)
+  <li><a href="https://rubygems.org/pages/download">RubyGems packet manager</a></li>
 </ul>
 as well as the following Ruby gems:  
 <ul>
